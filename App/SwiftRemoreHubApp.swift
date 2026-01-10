@@ -9,22 +9,14 @@ import SwiftUI
 
 @main
 struct SwiftRemoteHubApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      UsersView(usersViewModel: UsersViewModel(repository: UsersRepository()))
     }
-}
-
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Text("Hello!")
-        }
-    }
+  }
 }
 
 
 #Preview {
-  ContentView()
+  UsersView(usersViewModel: UsersViewModel(repository: UsersRepository()))
 }
