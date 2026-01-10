@@ -12,6 +12,11 @@
 		1178EAED2F12D52400FA9061 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAEC2F12D52400FA9061 /* User.swift */; };
 		1178EAEF2F12D5A000FA9061 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAEE2F12D5A000FA9061 /* UsersViewModel.swift */; };
 		1178EAF12F12DADE00FA9061 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAF02F12DADE00FA9061 /* UsersView.swift */; };
+		1178EAF32F12DCDE00FA9061 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAF22F12DCDE00FA9061 /* NetworkError.swift */; };
+		1178EAF52F12DD4C00FA9061 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAF42F12DD4C00FA9061 /* NetworkClient.swift */; };
+		1178EAF72F12E01200FA9061 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAF62F12E01200FA9061 /* UsersRepository.swift */; };
+		1178EAF92F12E59D00FA9061 /* UsersRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAF82F12E59D00FA9061 /* UsersRepositoryMock.swift */; };
+		1178EAFB2F12E61D00FA9061 /* UsersMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAFA2F12E61D00FA9061 /* UsersMockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,11 @@
 		1178EAEC2F12D52400FA9061 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1178EAEE2F12D5A000FA9061 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		1178EAF02F12DADE00FA9061 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		1178EAF22F12DCDE00FA9061 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1178EAF42F12DD4C00FA9061 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		1178EAF62F12E01200FA9061 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
+		1178EAF82F12E59D00FA9061 /* UsersRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepositoryMock.swift; sourceTree = "<group>"; };
+		1178EAFA2F12E61D00FA9061 /* UsersMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -142,6 +152,9 @@
 			children = (
 				1178EAEE2F12D5A000FA9061 /* UsersViewModel.swift */,
 				1178EAF02F12DADE00FA9061 /* UsersView.swift */,
+				1178EAF82F12E59D00FA9061 /* UsersRepositoryMock.swift */,
+				1178EAFA2F12E61D00FA9061 /* UsersMockData.swift */,
+				1178EAF62F12E01200FA9061 /* UsersRepository.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -164,6 +177,8 @@
 		1178EAE22F12D00800FA9061 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1178EAF22F12DCDE00FA9061 /* NetworkError.swift */,
+				1178EAF42F12DD4C00FA9061 /* NetworkClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -311,10 +326,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1178EAF92F12E59D00FA9061 /* UsersRepositoryMock.swift in Sources */,
 				1178EAED2F12D52400FA9061 /* User.swift in Sources */,
+				1178EAF72F12E01200FA9061 /* UsersRepository.swift in Sources */,
 				1178EAEF2F12D5A000FA9061 /* UsersViewModel.swift in Sources */,
 				1178EADD2F12CFB600FA9061 /* SwiftRemoreHubApp.swift in Sources */,
+				1178EAFB2F12E61D00FA9061 /* UsersMockData.swift in Sources */,
 				1178EAF12F12DADE00FA9061 /* UsersView.swift in Sources */,
+				1178EAF32F12DCDE00FA9061 /* NetworkError.swift in Sources */,
+				1178EAF52F12DD4C00FA9061 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

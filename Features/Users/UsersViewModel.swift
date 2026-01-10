@@ -10,17 +10,28 @@ import Combine
 
 @MainActor
 final class UsersViewModel: ObservableObject {
-
-    @Published var users: [User] = []
-
-    init() {
-        loadMockUsers()
+  
+  @Published var users: [User] = []
+  @Published var isLoading = false
+  @Published var errorMesasge: String?
+  
+  private let repository: UsersRepositoryProtocol
+  
+  @MainActor
+  init(repository: UsersRepositoryProtocol) {
+    self.repository = repository
+  }
+  
+  func loadUsers() async {
+    isLoading = true
+    errorMesasge = nil
+    
+    do {
+      users = try await repository.fetchUsers()
+    } catch {
+      errorMesasge = "Failed to fetch users: \(error)"
     }
-
-    private func loadMockUsers() {
-        users = [
-            User(id: 1, name: "John Doe", email: "john@mail.com"),
-            User(id: 2, name: "Jane Smith", email: "jane@mail.com")
-        ]
-    }
+    
+    isLoading = false
+  }
 }
