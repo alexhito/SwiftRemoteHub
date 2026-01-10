@@ -14,6 +14,7 @@ protocol UsersRepositoryProtocol {
 final class UsersRepository: UsersRepositoryProtocol {
   
   private let client: NetworkClientProtocol
+  private let cachedUsers = UsersCache()
   
   init(client: NetworkClientProtocol = NetworkClient()) {
     self.client = client
@@ -23,6 +24,13 @@ final class UsersRepository: UsersRepositoryProtocol {
     guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else {
       throw NetworkError.invalidUrl
     }
-    return try await client.fetch(fromUrl: url)
+    
+    if let cached = await cachedUsers.get() {
+      return cached
+    }
+    
+    let users: [User] = try await client.fetch(fromUrl: url)
+    await cachedUsers.set(users)
+    return users
   }
 }

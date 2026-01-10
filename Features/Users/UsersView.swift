@@ -19,20 +19,23 @@ struct UsersView: View {
       content
       .navigationTitle("Users")
       .task( {
-        await usersViewModel.loadUsers()
+        usersViewModel.loadUsers()
       })
+      .onDisappear {
+        usersViewModel.cancel()
+      }
     }
   }
   
   @ViewBuilder
   private var content: some View {
-    if usersViewModel.isLoading {
+    switch usersViewModel.state {
+    case .idle:
+      EmptyView()
+    case .loading:
       ProgressView("Loading...")
-    } else if let errorMessage = usersViewModel.errorMesasge {
-      Text(errorMessage)
-        .foregroundStyle(.red)
-    } else {
-      List(usersViewModel.users) { user in
+    case .success(let users):
+      List(users) { user in
         VStack(alignment: .leading) {
           Text(user.name)
             .font(.headline)
@@ -41,26 +44,45 @@ struct UsersView: View {
             .foregroundStyle(.secondary)
         }
       }
+    case .failure(let errorMessage):
+      VStack {
+        Text(errorMessage)
+          .foregroundStyle(.red)
+        Button("Retry") {
+          usersViewModel.retry()
+        }
+      }
     }
   }
+}
+
+#Preview("NetworkData") {
+  let repo = UsersRepository()
+  let viewModel = UsersViewModel(repository: repo)
+  viewModel.loadUsers()
+  return UsersView(usersViewModel: viewModel)
 }
 
 #Preview("Sucess") {
   let mockRepo = UsersRepositoryMock(result: .success(UsersMockData.users))
   
   let viewmodel = UsersViewModel(repository: mockRepo)
+  viewmodel.state = .success(UsersMockData.users)
   
   return UsersView(usersViewModel: viewmodel)
 }
 
 #Preview("Empty") {
   let mockRepo = UsersRepositoryMock(result: .success([]))
-  
-  return UsersView(usersViewModel: UsersViewModel(repository: mockRepo))
+  let viewmodel = UsersViewModel(repository: mockRepo)
+  viewmodel.state = .success([])
+
+  return UsersView(usersViewModel: viewmodel)
 }
 
 #Preview("Error") {
   let mockRepo = UsersRepositoryMock(result: .failure(NetworkError.invalidResponse))
-  
-  return UsersView(usersViewModel: UsersViewModel(repository: mockRepo))
+  let viewmodel = UsersViewModel(repository: mockRepo)
+  viewmodel.state = .failure("Error")
+  return UsersView(usersViewModel: viewmodel)
 }

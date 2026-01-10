@@ -17,6 +17,12 @@
 		1178EAF72F12E01200FA9061 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAF62F12E01200FA9061 /* UsersRepository.swift */; };
 		1178EAF92F12E59D00FA9061 /* UsersRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAF82F12E59D00FA9061 /* UsersRepositoryMock.swift */; };
 		1178EAFB2F12E61D00FA9061 /* UsersMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAFA2F12E61D00FA9061 /* UsersMockData.swift */; };
+		1178EB012F12EA5E00FA9061 /* MockUsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB002F12EA5E00FA9061 /* MockUsersRepository.swift */; };
+		1178EB032F12EA8C00FA9061 /* UsersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB022F12EA8C00FA9061 /* UsersViewModelTests.swift */; };
+		1178EB072F12F71D00FA9061 /* UsersCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB062F12F71D00FA9061 /* UsersCache.swift */; };
+		1178EB082F12F71D00FA9061 /* UsersCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB062F12F71D00FA9061 /* UsersCache.swift */; };
+		1178EB0B2F12FB9D00FA9061 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB0A2F12FB9D00FA9061 /* LoadState.swift */; };
+		1178EB0C2F12FB9D00FA9061 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB0A2F12FB9D00FA9061 /* LoadState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,20 +56,11 @@
 		1178EAF62F12E01200FA9061 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
 		1178EAF82F12E59D00FA9061 /* UsersRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepositoryMock.swift; sourceTree = "<group>"; };
 		1178EAFA2F12E61D00FA9061 /* UsersMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMockData.swift; sourceTree = "<group>"; };
+		1178EB002F12EA5E00FA9061 /* MockUsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsersRepository.swift; sourceTree = "<group>"; };
+		1178EB022F12EA8C00FA9061 /* UsersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModelTests.swift; sourceTree = "<group>"; };
+		1178EB062F12F71D00FA9061 /* UsersCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCache.swift; sourceTree = "<group>"; };
+		1178EB0A2F12FB9D00FA9061 /* LoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		1178EABD2F12CB6700FA9061 /* SwiftRemoteHubTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SwiftRemoteHubTests;
-			sourceTree = "<group>";
-		};
-		1178EAC72F12CB6700FA9061 /* SwiftRemoteHubUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SwiftRemoteHubUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1178EAAA2F12CB6500FA9061 /* Frameworks */ = {
@@ -93,10 +90,10 @@
 		1178EAA42F12CB6500FA9061 = {
 			isa = PBXGroup;
 			children = (
+				1178EAFD2F12EA2600FA9061 /* SwiftRemoteHubTests */,
 				1178EAEA2F12D49900FA9061 /* README.md */,
 				1178EADE2F12CFEA00FA9061 /* Features */,
 				1178EADB2F12CF4600FA9061 /* Core */,
-				1178EAD92F12CE1800FA9061 /* Test */,
 				1178EAD82F12CE0B00FA9061 /* App */,
 				1178EAAE2F12CB6500FA9061 /* Products */,
 			);
@@ -120,18 +117,10 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		1178EAD92F12CE1800FA9061 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				1178EABD2F12CB6700FA9061 /* SwiftRemoteHubTests */,
-				1178EAC72F12CB6700FA9061 /* SwiftRemoteHubUITests */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 		1178EADB2F12CF4600FA9061 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1178EB092F12FB9200FA9061 /* Enums */,
 				1178EAE22F12D00800FA9061 /* Networking */,
 				1178EAE12F12D00200FA9061 /* Models */,
 				1178EAE02F12CFF900FA9061 /* Utils */,
@@ -155,6 +144,7 @@
 				1178EAF82F12E59D00FA9061 /* UsersRepositoryMock.swift */,
 				1178EAFA2F12E61D00FA9061 /* UsersMockData.swift */,
 				1178EAF62F12E01200FA9061 /* UsersRepository.swift */,
+				1178EB062F12F71D00FA9061 /* UsersCache.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -181,6 +171,39 @@
 				1178EAF42F12DD4C00FA9061 /* NetworkClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		1178EAFD2F12EA2600FA9061 /* SwiftRemoteHubTests */ = {
+			isa = PBXGroup;
+			children = (
+				1178EAFF2F12EA3900FA9061 /* ViewModels */,
+				1178EAFE2F12EA3200FA9061 /* Mocks */,
+			);
+			path = SwiftRemoteHubTests;
+			sourceTree = "<group>";
+		};
+		1178EAFE2F12EA3200FA9061 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1178EB002F12EA5E00FA9061 /* MockUsersRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		1178EAFF2F12EA3900FA9061 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1178EB022F12EA8C00FA9061 /* UsersViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1178EB092F12FB9200FA9061 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				1178EB0A2F12FB9D00FA9061 /* LoadState.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,9 +241,6 @@
 			dependencies = (
 				1178EABC2F12CB6700FA9061 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				1178EABD2F12CB6700FA9061 /* SwiftRemoteHubTests */,
-			);
 			name = SwiftRemoteHubTests;
 			packageProductDependencies = (
 			);
@@ -240,9 +260,6 @@
 			);
 			dependencies = (
 				1178EAC62F12CB6700FA9061 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				1178EAC72F12CB6700FA9061 /* SwiftRemoteHubUITests */,
 			);
 			name = SwiftRemoteHubUITests;
 			packageProductDependencies = (
@@ -329,10 +346,12 @@
 				1178EAF92F12E59D00FA9061 /* UsersRepositoryMock.swift in Sources */,
 				1178EAED2F12D52400FA9061 /* User.swift in Sources */,
 				1178EAF72F12E01200FA9061 /* UsersRepository.swift in Sources */,
+				1178EB0B2F12FB9D00FA9061 /* LoadState.swift in Sources */,
 				1178EAEF2F12D5A000FA9061 /* UsersViewModel.swift in Sources */,
 				1178EADD2F12CFB600FA9061 /* SwiftRemoreHubApp.swift in Sources */,
 				1178EAFB2F12E61D00FA9061 /* UsersMockData.swift in Sources */,
 				1178EAF12F12DADE00FA9061 /* UsersView.swift in Sources */,
+				1178EB072F12F71D00FA9061 /* UsersCache.swift in Sources */,
 				1178EAF32F12DCDE00FA9061 /* NetworkError.swift in Sources */,
 				1178EAF52F12DD4C00FA9061 /* NetworkClient.swift in Sources */,
 			);
@@ -342,6 +361,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1178EB012F12EA5E00FA9061 /* MockUsersRepository.swift in Sources */,
+				1178EB082F12F71D00FA9061 /* UsersCache.swift in Sources */,
+				1178EB032F12EA8C00FA9061 /* UsersViewModelTests.swift in Sources */,
+				1178EB0C2F12FB9D00FA9061 /* LoadState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

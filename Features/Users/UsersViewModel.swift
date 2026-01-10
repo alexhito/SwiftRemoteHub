@@ -10,28 +10,41 @@ import Combine
 
 @MainActor
 final class UsersViewModel: ObservableObject {
-  
-  @Published var users: [User] = []
-  @Published var isLoading = false
-  @Published var errorMesasge: String?
+
+  @Published var state: LoadState<[User]> = .idle
   
   private let repository: UsersRepositoryProtocol
+  private var loadTask: Task<Void, Never>?
   
   @MainActor
   init(repository: UsersRepositoryProtocol) {
     self.repository = repository
   }
   
-  func loadUsers() async {
-    isLoading = true
-    errorMesasge = nil
+  func loadUsers() {
+    // this cancel the previous task if exist...
+    loadTask?.cancel()
     
-    do {
-      users = try await repository.fetchUsers()
-    } catch {
-      errorMesasge = "Failed to fetch users: \(error)"
+    loadTask = Task {
+      state = .loading
+      
+      do {
+        let users = try await repository.fetchUsers()
+        state = .success(users)
+      } catch is CancellationError {
+        // ignore if was canceled...
+      } catch {
+        state = .failure("Failed to fetch users: \(error)")
+      }
     }
-    
-    isLoading = false
+  }
+  
+  func retry() {
+    loadUsers()
+  }
+  
+  func cancel() {
+    loadTask?.cancel()
+    loadTask = nil
   }
 }
