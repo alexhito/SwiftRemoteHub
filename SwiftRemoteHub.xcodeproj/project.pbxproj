@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1178EADD2F12CFB600FA9061 /* SwiftRemoreHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EADC2F12CFB600FA9061 /* SwiftRemoreHubApp.swift */; };
 		1178EAEB2F12D49900FA9061 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1178EAEA2F12D49900FA9061 /* README.md */; };
+		1178EAED2F12D52400FA9061 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAEC2F12D52400FA9061 /* User.swift */; };
+		1178EAEF2F12D5A000FA9061 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAEE2F12D5A000FA9061 /* UsersViewModel.swift */; };
+		1178EAF12F12DADE00FA9061 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EAF02F12DADE00FA9061 /* UsersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 		1178EAC42F12CB6700FA9061 /* SwiftRemoteHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftRemoteHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1178EADC2F12CFB600FA9061 /* SwiftRemoreHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRemoreHubApp.swift; sourceTree = "<group>"; };
 		1178EAEA2F12D49900FA9061 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1178EAEC2F12D52400FA9061 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1178EAEE2F12D5A000FA9061 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		1178EAF02F12DADE00FA9061 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -134,6 +140,8 @@
 		1178EADF2F12CFF000FA9061 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				1178EAEE2F12D5A000FA9061 /* UsersViewModel.swift */,
+				1178EAF02F12DADE00FA9061 /* UsersView.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 		1178EAE12F12D00200FA9061 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1178EAEC2F12D52400FA9061 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,7 +311,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1178EAED2F12D52400FA9061 /* User.swift in Sources */,
+				1178EAEF2F12D5A000FA9061 /* UsersViewModel.swift in Sources */,
 				1178EADD2F12CFB600FA9061 /* SwiftRemoreHubApp.swift in Sources */,
+				1178EAF12F12DADE00FA9061 /* UsersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
