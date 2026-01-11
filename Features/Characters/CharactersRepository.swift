@@ -5,13 +5,14 @@
 //  Created by Alexander on 11/1/26.
 //
 //import RickAndMortyApi
+import Apollo
 
 protocol CharactersRepositoryProtocol {
 //  func fetchCharacters(page: Int) async throws -> [User]
 }
 
 final class CharactersRepository: CharactersRepositoryProtocol {
-//  let query = GetCharactersQuery(page: 1)
+  let query = MySchemaName.GetCharactersQuery(page: 1)
   
 //  private let client: NetworkClientProtocol
 //  private let cachedUsers = UsersCache()
