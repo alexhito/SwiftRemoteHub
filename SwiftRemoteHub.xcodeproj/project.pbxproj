@@ -23,6 +23,7 @@
 		1178EB082F12F71D00FA9061 /* UsersCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB062F12F71D00FA9061 /* UsersCache.swift */; };
 		1178EB0B2F12FB9D00FA9061 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB0A2F12FB9D00FA9061 /* LoadState.swift */; };
 		1178EB0C2F12FB9D00FA9061 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB0A2F12FB9D00FA9061 /* LoadState.swift */; };
+		1178EB922F13564000FA9061 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1178EB912F13564000FA9061 /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1178EB922F13564000FA9061 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +225,7 @@
 			);
 			name = SwiftRemoteHub;
 			packageProductDependencies = (
+				1178EB912F13564000FA9061 /* Apollo */,
 			);
 			productName = SwiftRemoteHub;
 			productReference = 1178EAAD2F12CB6500FA9061 /* SwiftRemoteHub.app */;
@@ -301,6 +304,9 @@
 			);
 			mainGroup = 1178EAA42F12CB6500FA9061;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1178EB902F13564000FA9061 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1178EAAE2F12CB6500FA9061 /* Products */;
 			projectDirPath = "";
@@ -695,6 +701,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1178EB902F13564000FA9061 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1178EB912F13564000FA9061 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1178EB902F13564000FA9061 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1178EAA52F12CB6500FA9061 /* Project object */;
 }

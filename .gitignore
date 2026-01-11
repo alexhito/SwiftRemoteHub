@@ -1,0 +1,20 @@
+# Swift / Xcode
+.build/
+DerivedData/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcuserdatad/
+*.xcuserstate
+
+# Swift Package Manager
+Packages/
+Package.resolved.lock
+# Package.resolved
+
+# CocoaPods
+Pods/
+
+# Other
+*.DS_Store
+*.swp
+*.tmp
+
