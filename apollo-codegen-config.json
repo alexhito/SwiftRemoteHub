@@ -1,0 +1,29 @@
+{
+  "schemaNamespace" : "MySchemaName",
+  "input" : {
+    "operationSearchPaths" : [
+      "./GraphQL/Queries/*.graphql",
+      "./GraphQL/Mutations/*.graphql"
+    ],
+    "schemaSearchPaths" : [
+      "./GraphQL/schema.json"
+    ]
+  },
+  "output" : {
+    "testMocks" : {
+      "none" : {
+      }
+    },
+    "schemaTypes" : {
+      "path" : "./RickAndMortyAPI",
+      "moduleType" : {
+        "swiftPackage" : {
+        }
+      }
+    },
+    "operations" : {
+      "inSchemaModule" : {
+      }
+    }
+  }
+}
