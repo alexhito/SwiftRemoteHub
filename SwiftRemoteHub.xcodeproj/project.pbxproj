@@ -61,6 +61,7 @@
 		1178EB022F12EA8C00FA9061 /* UsersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModelTests.swift; sourceTree = "<group>"; };
 		1178EB062F12F71D00FA9061 /* UsersCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCache.swift; sourceTree = "<group>"; };
 		1178EB0A2F12FB9D00FA9061 /* LoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
+		1178EB942F135A5000FA9061 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		1178EAA42F12CB6500FA9061 = {
 			isa = PBXGroup;
 			children = (
+				1178EB932F135A4100FA9061 /* GraphQL */,
 				1178EAFD2F12EA2600FA9061 /* SwiftRemoteHubTests */,
 				1178EAEA2F12D49900FA9061 /* README.md */,
 				1178EADE2F12CFEA00FA9061 /* Features */,
@@ -206,6 +208,30 @@
 				1178EB0A2F12FB9D00FA9061 /* LoadState.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		1178EB932F135A4100FA9061 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				1178EB962F135A6700FA9061 /* Mutations */,
+				1178EB952F135A6000FA9061 /* Queries */,
+				1178EB942F135A5000FA9061 /* schema.json */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		1178EB952F135A6000FA9061 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		1178EB962F135A6700FA9061 /* Mutations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mutations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
