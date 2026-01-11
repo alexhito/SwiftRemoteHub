@@ -17,7 +17,8 @@
     "schemaTypes" : {
       "path" : "./RickAndMortyAPI",
       "moduleType" : {
-        "swiftPackage" : {
+        "embeddedInTarget" : {
+          "name" : "SwiftRemoteHub"
         }
       }
     },

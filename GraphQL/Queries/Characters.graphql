@@ -1,15 +1,15 @@
 query GetCharacters($page: Int) {
   characters(page: $page) {
     info {
-      ..InfoDetails
+      ...InfoDetails
     }
     results {
-    ...CharacterDetails
+      ...CharacterDetails
     }
   }
 }
 
-fargment InfoDetails on Info {
+fragment InfoDetails on Info {
   count
   pages
   next
