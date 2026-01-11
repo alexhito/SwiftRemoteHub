@@ -24,6 +24,8 @@
 		1178EB0B2F12FB9D00FA9061 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB0A2F12FB9D00FA9061 /* LoadState.swift */; };
 		1178EB0C2F12FB9D00FA9061 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1178EB0A2F12FB9D00FA9061 /* LoadState.swift */; };
 		1178EB922F13564000FA9061 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1178EB912F13564000FA9061 /* Apollo */; };
+		1178EBA82F13654B00FA9061 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 1178EBA62F13654B00FA9061 /* schema.json */; };
+		1178EBA92F13654B00FA9061 /* Characters.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1178EBA42F13654B00FA9061 /* Characters.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +63,8 @@
 		1178EB022F12EA8C00FA9061 /* UsersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModelTests.swift; sourceTree = "<group>"; };
 		1178EB062F12F71D00FA9061 /* UsersCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCache.swift; sourceTree = "<group>"; };
 		1178EB0A2F12FB9D00FA9061 /* LoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
-		1178EB942F135A5000FA9061 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		1178EB972F135BD600FA9061 /* Characters.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Characters.graphql; sourceTree = "<group>"; };
+		1178EBA42F13654B00FA9061 /* Characters.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Characters.graphql; sourceTree = "<group>"; };
+		1178EBA62F13654B00FA9061 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +96,7 @@
 		1178EAA42F12CB6500FA9061 = {
 			isa = PBXGroup;
 			children = (
-				1178EB932F135A4100FA9061 /* GraphQL */,
+				1178EBA72F13654B00FA9061 /* GraphQL */,
 				1178EAFD2F12EA2600FA9061 /* SwiftRemoteHubTests */,
 				1178EAEA2F12D49900FA9061 /* README.md */,
 				1178EADE2F12CFEA00FA9061 /* Features */,
@@ -211,29 +213,29 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		1178EB932F135A4100FA9061 /* GraphQL */ = {
-			isa = PBXGroup;
-			children = (
-				1178EB962F135A6700FA9061 /* Mutations */,
-				1178EB952F135A6000FA9061 /* Queries */,
-				1178EB942F135A5000FA9061 /* schema.json */,
-			);
-			path = GraphQL;
-			sourceTree = "<group>";
-		};
-		1178EB952F135A6000FA9061 /* Queries */ = {
-			isa = PBXGroup;
-			children = (
-				1178EB972F135BD600FA9061 /* Characters.graphql */,
-			);
-			path = Queries;
-			sourceTree = "<group>";
-		};
-		1178EB962F135A6700FA9061 /* Mutations */ = {
+		1178EBA32F13654B00FA9061 /* Mutations */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Mutations;
+			sourceTree = "<group>";
+		};
+		1178EBA52F13654B00FA9061 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				1178EBA42F13654B00FA9061 /* Characters.graphql */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		1178EBA72F13654B00FA9061 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				1178EBA32F13654B00FA9061 /* Mutations */,
+				1178EBA52F13654B00FA9061 /* Queries */,
+				1178EBA62F13654B00FA9061 /* schema.json */,
+			);
+			path = GraphQL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +355,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1178EAEB2F12D49900FA9061 /* README.md in Resources */,
+				1178EBA82F13654B00FA9061 /* schema.json in Resources */,
+				1178EBA92F13654B00FA9061 /* Characters.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

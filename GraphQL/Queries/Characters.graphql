@@ -1,31 +1,39 @@
 query GetCharacters($page: Int) {
   characters(page: $page) {
     info {
-      count
-      pages
-      next
-      prev
+      ..InfoDetails
     }
     results {
-      id
-      name
-      status
-      species
-      type
-      gender
-      image
-      origin {
-        name
-        id
-      }
-      location {
-        name
-        id
-      }
-      episode {
-        id
-      }
-      created
+    ...CharacterDetails
     }
   }
+}
+
+fargment InfoDetails on Info {
+  count
+  pages
+  next
+  prev
+}
+
+fragment CharacterDetails on Character {
+  id
+  name
+  status
+  species
+  type
+  gender
+  image
+  origin {
+    name
+    id
+  }
+  location {
+    name
+    id
+  }
+  episode {
+    id
+  }
+  created
 }
