@@ -62,6 +62,8 @@
 		1178EB062F12F71D00FA9061 /* UsersCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCache.swift; sourceTree = "<group>"; };
 		1178EB0A2F12FB9D00FA9061 /* LoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
 		1178EB942F135A5000FA9061 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		1178EB972F135BD600FA9061 /* Characters.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Characters.graphql; sourceTree = "<group>"; };
+		1178EB982F135C2100FA9061 /* rickandmortyapi */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = rickandmortyapi; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		1178EAA42F12CB6500FA9061 = {
 			isa = PBXGroup;
 			children = (
+				1178EB982F135C2100FA9061 /* rickandmortyapi */,
 				1178EB932F135A4100FA9061 /* GraphQL */,
 				1178EAFD2F12EA2600FA9061 /* SwiftRemoteHubTests */,
 				1178EAEA2F12D49900FA9061 /* README.md */,
@@ -223,6 +226,7 @@
 		1178EB952F135A6000FA9061 /* Queries */ = {
 			isa = PBXGroup;
 			children = (
+				1178EB972F135BD600FA9061 /* Characters.graphql */,
 			);
 			path = Queries;
 			sourceTree = "<group>";

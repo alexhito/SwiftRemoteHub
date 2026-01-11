@@ -18,12 +18,9 @@ struct UsersView: View {
     NavigationStack {
       content
       .navigationTitle("Users")
-      .task( {
-        usersViewModel.loadUsers()
-      })
-      .onDisappear {
-        usersViewModel.cancel()
-      }
+    }
+    .task {
+      await usersViewModel.loadUsers()
     }
   }
   
@@ -49,18 +46,13 @@ struct UsersView: View {
         Text(errorMessage)
           .foregroundStyle(.red)
         Button("Retry") {
-          usersViewModel.retry()
+          Task {
+            await usersViewModel.loadUsers()
+          }
         }
       }
     }
   }
-}
-
-#Preview("NetworkData") {
-  let repo = UsersRepository()
-  let viewModel = UsersViewModel(repository: repo)
-  viewModel.loadUsers()
-  return UsersView(usersViewModel: viewModel)
 }
 
 #Preview("Sucess") {
