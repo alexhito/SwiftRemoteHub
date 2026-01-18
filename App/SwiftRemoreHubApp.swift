@@ -11,12 +11,13 @@ import SwiftUI
 struct SwiftRemoteHubApp: App {
   var body: some Scene {
     WindowGroup {
-      UsersView(usersViewModel: UsersViewModel(repository: UsersRepository()))
+      CharactersView(charactersViewModel: CharactersViewModel(repository: CharactersRepository()))
+//      UsersView(usersViewModel: UsersViewModel(repository: UsersRepository()))
     }
   }
 }
 
 
 #Preview {
-  UsersView(usersViewModel: UsersViewModel(repository: UsersRepository()))
+//  UsersView(usersViewModel: UsersViewModel(repository: UsersRepository()))
 }

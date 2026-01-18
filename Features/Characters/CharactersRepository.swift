@@ -8,30 +8,20 @@
 import Apollo
 
 protocol CharactersRepositoryProtocol {
-//  func fetchCharacters(page: Int) async throws -> [User]
+  func fetchCharacters(page: Int) async throws -> [Character]
 }
 
 final class CharactersRepository: CharactersRepositoryProtocol {
-  let query = MySchemaName.GetCharactersQuery(page: 1)
   
-//  private let client: NetworkClientProtocol
-//  private let cachedUsers = UsersCache()
-//  
-//  init(client: NetworkClientProtocol = NetworkClient()) {
-//    self.client = client
-//  }
-//  
-//  func fetchUsers() async throws -> [User] {
-//    guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else {
-//      throw NetworkError.invalidUrl
-//    }
-//    
-//    if let cached = await cachedUsers.get() {
-//      return cached
-//    }
-//    
-//    let users: [User] = try await client.fetch(fromUrl: url)
-//    await cachedUsers.set(users)
-//    return users
-//  }
+  func fetchCharacters(page: Int) async throws -> [Character] {
+    do {
+      let query = MySchemaName.GetCharactersQuery(page: .init(integerLiteral: .IntegerLiteralType(page)))
+      let response = try await Network.shared.apollo.fetch(query: query)
+      let characters = response.data?.characters?.results?.compactMap { $0 }.compactMap { Character.init(from: $0)} ?? []
+      return characters
+    } catch {
+      print("Error fetching hero: \(error)")
+      throw NetworkError.invalidResponse
+    }
+  }
 }

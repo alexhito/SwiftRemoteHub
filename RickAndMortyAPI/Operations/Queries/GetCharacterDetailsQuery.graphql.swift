@@ -5,11 +5,11 @@
 @_spi(Execution) @_spi(Unsafe) import ApolloAPI
 
 extension MySchemaName {
-  struct GetCharacterQuery: GraphQLQuery {
-    static let operationName: String = "GetCharacter"
+  struct GetCharacterDetailsQuery: GraphQLQuery {
+    static let operationName: String = "GetCharacterDetails"
     static let operationDocument: ApolloAPI.OperationDocument = .init(
       definition: .init(
-        #"query GetCharacter($id: ID!) { character(id: $id) { __typename ...CharacterDetails } }"#,
+        #"query GetCharacterDetails($id: ID!) { character(id: $id) { __typename ...CharacterDetails } }"#,
         fragments: [CharacterDetails.self]
       ))
 
@@ -30,7 +30,7 @@ extension MySchemaName {
         .field("character", Character?.self, arguments: ["id": .variable("id")]),
       ] }
       static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
-        GetCharacterQuery.Data.self
+        GetCharacterDetailsQuery.Data.self
       ] }
 
       /// Get a specific character by ID
@@ -49,7 +49,7 @@ extension MySchemaName {
           .fragment(CharacterDetails.self),
         ] }
         static var __fulfilledFragments: [any ApolloAPI.SelectionSet.Type] { [
-          GetCharacterQuery.Data.Character.self,
+          GetCharacterDetailsQuery.Data.Character.self,
           CharacterDetails.self
         ] }
 
